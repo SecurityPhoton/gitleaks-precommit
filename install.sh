@@ -11,6 +11,8 @@ fi
 curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py > .git/hooks/pre-commit
 curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml > .gitleaks.toml
 
+sudo apt-get update
+sudo apt-get install -y git make golang
 git clone https://github.com/gitleaks/gitleaks.git
 cd gitleaks
 make build
