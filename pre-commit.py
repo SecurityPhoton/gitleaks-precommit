@@ -12,7 +12,7 @@ def install_gitleaks():
     if system == 'Darwin':
         brew_install_gitleaks()
     elif system == 'Linux':
-        apt_install_gitleaks()
+        linux_install_gitleaks()
     elif system == 'Windows':
         choco_install_gitleaks()
     else:
@@ -26,9 +26,16 @@ def brew_install_gitleaks():
         print('Failed to install gitleaks: {}'.format(err))
         sys.exit(1)
 
-def apt_install_gitleaks():
+def linux_install_gitleaks():
     try:
-        subprocess.run(['sudo', 'apt-get', 'install', '-y', 'gitleaks'], check=True)
+        # Clone the Gitleaks repository
+        subprocess.run(['git', 'clone', 'https://github.com/zricethezav/gitleaks.git'], check=True)
+        # Change to the cloned repository directory
+        subprocess.run(['cd', 'gitleaks'], check=True, shell=True)
+        # Build Gitleaks
+        subprocess.run(['make', 'build'], check=True, shell=True)
+        # Move the Gitleaks binary into /usr/local/bin
+        subprocess.run(['sudo', 'mv', 'gitleaks', '/usr/local/bin'], check=True)
     except subprocess.CalledProcessError as err:
         print('Failed to install gitleaks: {}'.format(err))
         sys.exit(1)
