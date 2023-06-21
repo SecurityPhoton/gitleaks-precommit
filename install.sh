@@ -12,7 +12,11 @@ curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-
 curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml > .gitleaks.toml
 
 sudo apt-get update
-sudo apt-get install -y git make golang
+sudo apt-get install -y git make 
+rm -rf /usr/local/go && tar -C /usr/local -xzf go1.20.5.linux-amd64.tar.gz
+export PATH=$PATH:/usr/local/go/bin
+go version
+
 git clone https://github.com/gitleaks/gitleaks.git
 cd gitleaks
 make build
