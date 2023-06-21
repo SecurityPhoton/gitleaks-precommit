@@ -1,5 +1,6 @@
 #!/bin/bash
 
+rm -rf gitleaks/
 # Install Python3 if not already installed
 if ! command -v python3 > /dev/null; then
     echo "Python3 not found. Installing Python3..."
