@@ -4,7 +4,7 @@ Script for GIT hook to check sensitive info on commit
 ## Gitleaks pre-commit hook installation and usage
 
 This script installs the Gitleaks pre-commit hook in your Git project, which checks for sensitive information in your code before each commit using the Gitleaks tool.
-Installation
+## Installation
 
 To install the pre-commit hook and its config file, run the following command in the root directory of your Git project:
 ```
