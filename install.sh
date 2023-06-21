@@ -11,6 +11,10 @@ fi
 curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py > .git/hooks/pre-commit
 curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml > .gitleaks.toml
 
+git clone https://github.com/gitleaks/gitleaks.git
+cd gitleaks
+make build
+
 # Make the pre-commit script executable
 chmod +x .git/hooks/pre-commit
 
