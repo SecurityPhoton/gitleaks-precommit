@@ -12,9 +12,15 @@ curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/inst
 ```
 This will download and run the installation script, which will download the pre-commit.py script and .gitleaks.toml config file from the pontarr/gitleaks-precommit GitHub repository and save them in the .git/hooks directory and the root project directory, respectively. The pre-commit hook will be automatically executed before each commit.
 
-## Installation MacOS and Windows
-You need have a python3 preinstalled on your system. Windows users also need choco packet manager on the system.
+## Installation MacOS
+You need have a python3 preinstalled on your system.
 You can just git clone this repo or download files and put the [script file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py) into your .git/hooks/pre-commit file and [config file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml) into the root of your git repo.
+I have no chance to verify it working on Mac and thus it can be tricky to run it and might need changes.
+
+## Installation Windows 
+You need have a python3 preinstalled on your system. As well you need to have a choco packet manager installed.
+You can just git clone this repo or download files and put the [script file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py) into your .git/hooks/pre-commit file and [config file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml) into the root of your git repo.
+I have no chance to verify it working on Mac and thus it can be tricky to run it and might need changes.
 
 ## Usage
 
