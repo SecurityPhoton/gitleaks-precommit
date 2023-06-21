@@ -55,10 +55,8 @@ def check_gitleaks():
         install_gitleaks()
 
 
-
 # Check for gitleaks installation and enable it with git config
 check_gitleaks()
-
 
 def gitleaksEnabled():
     """Determine if the pre-commit hook for gitleaks is enabled."""
@@ -69,13 +67,10 @@ def gitleaksEnabled():
 
 
 if gitleaksEnabled():
-    exitCode = os.WEXITSTATUS(os.system('gitleaks protect -v --staged'))
-    if exitCode == 1:
-        print('''Warning: gitleaks has detected sensitive information in your changes.
-To disable the gitleaks precommit hook run the following command:
-
-    git config hooks.gitleaks false
-''')
+    try:
+        output = subprocess.check_output('gitleaks protect -v --staged')
+    except subprocess.CalledProcessError as e:
+        print("Error running gitleaks:", e)
         sys.exit(1)
 else:
     print('gitleaks precommit disabled\
