@@ -24,8 +24,9 @@ cd gitleaks
 make build
 chmod +x gitleaks
 mv gitleaks /usr/local/bin
+cd ..
 
 # Make the pre-commit script executable
 chmod +x .git/hooks/pre-commit
-
+rm go1.20.5.linux-amd64.tar.gz
 echo "Gitleaks pre-commit hook installed in $(pwd)/.git/hooks."
