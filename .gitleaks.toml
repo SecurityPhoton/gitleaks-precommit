@@ -1,0 +1,33 @@
+# .gitleaks.toml
+
+# Global options
+[global]
+# Whether to use color output in the terminal
+color = true
+# Whether to include line numbers in output
+line_numbers = true
+
+# Rules
+[[rules]]
+# Rule ID
+id = "AWS"
+# Description for the rule
+description = "Potential AWS access key leaked"
+# Regex pattern to match potential AWS access key
+regex = '''(?i)(["'`]?AKIA[0-9A-Z]{16}["'`]?)'''
+
+[[rules]]
+id = "PASSWORD"
+description = "Potential password leaked"
+regex = '''(?i)(password|passwd|pwd|pass|passwd_|PASSWORD|PASSWORD_|PASSWORD=|password=|pass=|passwd=)(\s*)(["'`]?[\w!"#$%&'()*+,\-./:;<=>?@\[\]^_`{|}~]{8,}["'`]?)'''
+
+[[rules]]
+id = "CREDENTIALS"
+description = "Potential credentials file leaked"
+regex = '''(?i)(credentials|CREDS|creds|secrets|SECRET|Secrets|access.key|access.token)(\s*)(\=)(\s*)(["'`]?[\w!"#$%&'()*+,\-./:;<=>?@\[\]^_`{|}~]+["'`]?)'''
+
+[[rules]]
+id = "TELE_TOKEN"
+description = "Potential Telegram bot token leaked"
+regex = '''(?i)(["'`]?[0-9]{10}:[a-zA-Z0-9_-]{35}["'`]?)'''
+
