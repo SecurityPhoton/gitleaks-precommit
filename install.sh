@@ -9,7 +9,7 @@ if ! command -v python3 > /dev/null; then
 fi
 
 # Download the pre-commit script and its config file
-curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py > .git/hooks/pre-commit.py
+curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py > .git/hooks/pre-commit
 curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml > .gitleaks.toml
 
 sudo apt-get update
