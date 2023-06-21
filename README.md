@@ -4,7 +4,7 @@ Script for GIT hook to check sensitive info on commit
 ## Gitleaks pre-commit hook installation and usage
 
 This script installs the Gitleaks pre-commit hook in your Git project, which checks for sensitive information in your code before each commit using the Gitleaks tool.
-## Installation Linux
+## Installation Linux (Debian \ Ubuntu)
 
 To install the pre-commit hook and its config file, run the following command in the root directory of your Git project:
 ```
@@ -14,7 +14,7 @@ This will download and run the installation script, which will download the pre-
 
 ## Installation MacOS and Windows
 You need have a python3 preinstalled on your system. Windows users also need choco packet manager on the system.
-You can just git clone this repo or download files and put the [file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py) into your .git/hooks/pre-commit file and [config file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml) into the root of your git repo.
+You can just git clone this repo or download files and put the [script file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py) into your .git/hooks/pre-commit file and [config file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml) into the root of your git repo.
 
 ## Usage
 
