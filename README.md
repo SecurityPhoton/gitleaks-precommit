@@ -19,7 +19,7 @@ I have no chance to verify it working on Mac and thus it can be tricky to run it
 
 ## Installation Windows 
 You need have a python3 preinstalled on your system. As well you need to have a choco packet manager installed.
-You can just git clone this repo or download files and put the [script file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py) into your .git/hooks/pre-commit file and [config file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml) into the root of your git repo.
+You can just git clone this repo or download files and put the [script file]([https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py](https://github.com/pontarr/gitleaks-precommit/blob/main/pre-commit-win.py)) into your .git/hooks/pre-commit file and [config file](https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml) into the root of your git repo.
 I have no chance to verify it working on Mac and thus it can be tricky to run it and might need changes.
 
 ## Usage
