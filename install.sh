@@ -22,6 +22,8 @@ go version
 git clone https://github.com/gitleaks/gitleaks.git
 cd gitleaks
 make build
+chmod +x gitleaks
+mv gitleaks /usr/local/bin
 
 # Make the pre-commit script executable
 chmod +x .git/hooks/pre-commit
