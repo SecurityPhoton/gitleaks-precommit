@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Install Python3 if not already installed
+if ! command -v python3 > /dev/null; then
+    echo "Python3 not found. Installing Python3..."
+    sudo apt-get update
+    sudo apt-get install -y python3
+fi
+
 # Download the pre-commit script and its config file
 curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/pre-commit.py > .git/hooks/pre-commit
 curl -sSL https://raw.githubusercontent.com/pontarr/gitleaks-precommit/main/.gitleaks.toml > .gitleaks.toml
