@@ -1,0 +1,14 @@
+#!/bin/bash
+# this is the windows pre commit file that runs the script
+
+# Change to the root directory of the Git repository
+cd "$(git rev-parse --show-toplevel)"
+
+# Run the Python script
+python .git\\hooks\\pre-commit.py
+
+# Capture the exit code of the Python script
+exit_code=$?
+
+# Exit with the captured exit code
+exit $exit_code
